@@ -1,0 +1,187 @@
+$Primary: #424242;
+$Primary-light: #6d6d6d;
+$Primary-dark: #1b1b1b;
+
+$Secondary: #304ffe;
+$Secondary-light: #7a7cff;
+$Secondary-dark: #0026ca;
+
+$Primary-text: #ffffff;
+$Secondary-Text: #ffffff;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $Primary-text;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+    color: $Primary-text;
+}
+
+.Color-P {
+  color: $Primary;
+}
+.Bg-Primary {
+  background-color: $Primary;
+}
+.Bg-Primary-light {
+  background-color: $Primary-light;
+}
+.Bg-Primary-Dark {
+  background-color: $Primary-dark;
+}
+
+.Bg-Secondary {
+  background-color: $Secondary;
+}
+.Bg-Secondary-light {
+  background-color: $Secondary-light;
+}
+.Bg-Secondary-Dark {
+  background-color: $Secondary-dark;
+}
+
+.h1 {
+  font-size: 96px;
+  font-weight: 300;
+  letter-spacing: -1.5px;
+}
+.h2 {
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+.h3 {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.h4 {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+.h5 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.h6 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+.Subtitle-1 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+}
+.Subtitle-2 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+.Body-1 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.Body-2 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+.Text-Button {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+}
+.Caption {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.Overline {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.Text-Center {
+  text-align: center;
+}
+
+.Button {
+  color: $Primary-text;
+  text-decoration: none;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0,0,0,.12);  
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: Roboto,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 8px 0 8px;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+  height: 36px;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 4px;
+
+  &-Secondary {
+    background-color: $Secondary;
+  }
+  &-Secondary-Light {
+    background-color: $Secondary-light;
+  }
+  &-Secondary-Dark {
+    background-color: $Secondary-dark;
+  }
+}
+
+
+// Containers
+
+.Main {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &-Container {
+    width: 100%;
+    max-width: 1280px;
+    position: relative;
+  }
+}
+.Row {
+  position: relative;
+  width: 100%;
+}
+.Flex-Center {
+  display: flex;
+  justify-content: center;
+}

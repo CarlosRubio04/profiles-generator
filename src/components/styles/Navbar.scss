@@ -1,0 +1,14 @@
+
+.Navbar {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    &-Container {
+        width: 100%;
+        max-width: 1280px;
+        padding: 20px 0 12px;
+        position: relative;
+    }
+} 
