@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from '../firebase';
-import { async } from 'q';
+
+import Image from './Image';
 
 class Images extends React.Component {
     constructor(props) {
@@ -13,12 +14,6 @@ class Images extends React.Component {
     }
 
     componentDidMount() {
-        // const REF = firebase.database().ref('images');
-        // REF.on('value', (snaptshot) => {
-        //     let data = snaptshot.val();
-        //     console.log(data);
-        // })
-
         this.fetchData();
     }
 
@@ -55,9 +50,7 @@ class Images extends React.Component {
             <div>
                {this.state.data.map(item => {
                     return (
-                        <h1 className="Color-Primary" key={item.id}>
-                            {item.url}
-                        </h1>
+                        <Image key={item.id} image={item} />
                     )
                 })} 
             </div>
