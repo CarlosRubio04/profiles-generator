@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/Navbar.scss';
 
@@ -8,7 +9,9 @@ class Navbar extends React.Component {
         return (
             <div className="Navbar Bg-Primary-Dark">
                 <div className="Navbar-Container">
-                    <h1 className="Body-1">Name Place</h1>
+                    <Link to="/" className="Body-1">
+                        Name Place
+                    </Link>
                 </div>
             </div>
         )

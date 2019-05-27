@@ -3,6 +3,8 @@ import firebase from '../firebase';
 
 import Image from './Image';
 
+import './styles/Images.scss';
+
 class Images extends React.Component {
     constructor(props) {
         super(props)
@@ -47,7 +49,7 @@ class Images extends React.Component {
         }
 
         return(
-            <div>
+            <div className="ImagesContainer">
                {this.state.data.map(item => {
                     return (
                         <Image key={item.id} image={item} />
