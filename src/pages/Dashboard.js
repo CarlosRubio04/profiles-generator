@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Images from '../components/Images';
-
+import Profiles from "../components/Profiles";
 
 export default class Dashboard extends Component {
-    render() {
-        return (
-            <section className="Main">
-                <div className="Main-Container">
-                    <div className="Row">
-                        <Images></Images>
-                    </div>
-                </div>
-            </section>
-        )
-    }
+  render() {
+    return (
+      <section className="Main">
+            <div className="Row">
+                <Profiles />
+             </div>
+      </section>
+    );
+  }
 }

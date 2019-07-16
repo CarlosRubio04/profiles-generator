@@ -1,10 +1,10 @@
-$Primary: #424242;
-$Primary-light: #6d6d6d;
-$Primary-dark: #1b1b1b;
+$Primary: #E6E6E6;
+$Primary-light: #F5F5F5;
+$Primary-dark: #5B5B5B;
 
-$Secondary: #304ffe;
-$Secondary-light: #7a7cff;
-$Secondary-dark: #0026ca;
+$Secondary: #F0F0F0;
+$Secondary-light: #F5F5F5;
+$Secondary-dark: #5B5B5B;
 
 $Primary-text: #ffffff;
 $Secondary-Text: #ffffff;
@@ -123,6 +123,7 @@ code {
 .Button {
   color: $Primary-text;
   text-decoration: none;
+  font-family: 'Roboto Mono', monospace;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0,0,0,.12);  
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: Roboto,sans-serif;
@@ -130,7 +131,7 @@ code {
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0 8px 0 8px;
+  padding: 0 12px 0 12px;
   display: inline-flex;
   position: relative;
   align-items: center;
@@ -171,7 +172,7 @@ code {
   display: flex;
   justify-content: center;
 
-  &-Container {
+  &Container {
     width: 100%;
     max-width: 1280px;
     position: relative;
@@ -181,7 +182,10 @@ code {
   position: relative;
   width: 100%;
 }
-.Flex-Center {
+.FlexCenter {
   display: flex;
   justify-content: center;
+}
+.AlignCenter {
+  align-items: center;
 }

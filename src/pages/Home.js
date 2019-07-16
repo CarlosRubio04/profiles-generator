@@ -6,17 +6,18 @@ import './styles/Home.scss';
 export default class Home extends Component {
     render() {
         return (
-            <section className="Main Bg-Secondary">
-                <div className="Main-Contianer">
+            <section className="Main AlignCenter Bg-Secondary-light">
+                <div className="MainContianer">
                     <div className="Row">
                         <div className="Col">
                             <h1 className="h1">
-                                Welcome
+                                Stair Lifts Feel The Freedom Of Your Home
                             </h1>
+                            <p className="sub">Astronomy Binoculars A Great Alternative</p>
                         </div>
-                        <div className="Col Flex-Center">
+                        <div className="Col">
                             <Link className="Text-Button Button Button-Secondary-Dark" to="/dashboard">
-                                Start
+                                Empieza Ahora
                             </Link>
                         </div>
                     </div>

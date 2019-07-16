@@ -1,0 +1,27 @@
+
+.ProfileContiner {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #5B5B5B;
+    overflow: hidden;
+    box-shadow: 0 1px 16px 0 rgba($color: #6B6B6B, $alpha: .10);
+    transition: box-shadow .5s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 10px 16px 0 rgba($color: #6B6B6B, $alpha: .10);
+    }
+}
+
+.ProfileHeader {
+    padding: 60px 20px 10px;
+    span {
+        font-family: 'Roboto Mono', monospace;
+    }
+}
+.ProfileBody {
+    padding: 0 20px;
+}

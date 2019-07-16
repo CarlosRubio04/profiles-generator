@@ -1,0 +1,49 @@
+{
+    "profiles": [
+        {
+            "id": "250fe715-88d4-4c18-95e7-62a6a097803a",
+            "cargo": "Frontend Developer",
+            "nivel": "Staff 2",
+            "cargosDependientes": "Ninguno",
+            "cargoJefeInmediato": "Chief Tecnology Officer",
+            "cargoAlReportar": "Chief Tecnology Officer",
+            "area": "Tecnologia",
+            "ciudad": "Bogotá",
+            "descripcion": "Apoyar el proceso de desarrollo de las plataformas de ACSENDO con calidad y oportunidad, de manera que los clientes cuenten con una herramienta óptima para el desarrollo de sus mediciones y puedan tomar decisiones confiables sobre su talento humano.",
+            "educacion": "Tecnologo, Universitario en Sistemas",
+            "conocimientoTecnico": "HTML, JAVA, PHP",
+            "experiencia": "4 Años",
+            "idiomas": "Ingles"
+        },
+        {
+            "id": "250fe715-88d4-4c18-95e7-62a6a097803b",
+            "cargo": "Senior Backend Developer",
+            "nivel": "Staff 3",
+            "cargosDependientes": "Ninguno",
+            "cargoJefeInmediato": "Chief Tecnology Officer",
+            "cargoAlReportar": "Chief Tecnology Officer",
+            "area": "Tecnologia",
+            "ciudad": "Bogotá",
+            "descripcion": "Apoyar el proceso de desarrollo de las plataformas de ACSENDO con calidad y oportunidad, de manera que los clientes cuenten con una herramienta óptima para el desarrollo de sus mediciones y puedan tomar decisiones confiables sobre su talento humano.",
+            "educacion": "Tecnologo, Universitario en Sistemas",
+            "conocimientoTecnico": "HTML, JAVA, PHP",
+            "experiencia": "4 Años",
+            "idiomas": "Ingles"
+        },
+        {
+            "id": "250fe715-88d4-4c18-95e7-62a6a097803c",
+            "cargo": "Comunication Designer",
+            "nivel": "Staff 1",
+            "cargosDependientes": "Ninguno",
+            "cargoJefeInmediato": "Chief Marketing Officer",
+            "cargoAlReportar": "Chief Marketing Officer",
+            "area": "Mercadeo",
+            "ciudad": "Bogotá",
+            "descripcion": "Apoyar el proceso de desarrollo de las plataformas de ACSENDO con calidad y oportunidad, de manera que los clientes cuenten con una herramienta óptima para el desarrollo de sus mediciones y puedan tomar decisiones confiables sobre su talento humano.",
+            "educacion": "Tecnologo, Universitario en Sistemas",
+            "conocimientoTecnico": "Suite de Adobe",
+            "experiencia": "2 Años",
+            "idiomas": "Ingles"
+        }
+    ]
+}

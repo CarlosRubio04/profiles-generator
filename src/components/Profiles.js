@@ -1,11 +1,11 @@
 import React from 'react';
 import firebase from '../firebase';
 
-import Image from './Image';
+import Profile from './Profile';
 
-import './styles/Images.scss';
+import './styles/Profiles.scss';
 
-class Images extends React.Component {
+class Profiles extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -22,7 +22,7 @@ class Images extends React.Component {
     fetchData = () => {
         this.setState({ loading: true, error: null });
 
-        const REF = firebase.database().ref('images');
+        const REF = firebase.database().ref('profiles');
             
         REF.once('value').then((snaptshot) => {
             this.setState({
@@ -49,16 +49,25 @@ class Images extends React.Component {
         }
 
         return(
-            <div className="ImagesContainer">
-               {this.state.data.map(item => {
-                    return (
-                        <Image key={item.id} image={item} />
-                    )
-                })} 
+            <div className="DashBoard">
+                <div className="SubHeader Bg-Secondary">
+                    <div className="SubHeaderContainer">
+                        <h2>How Great Is The Strength Of Your Belief</h2>
+                    </div>
+                </div>
+                <div className="Row FlexCenter">
+                    <div className="ProfilesContainer">
+                        {
+                            this.state.data.map(item => {
+                                return (<Profile key={item.id} profile={item} />)
+                            })
+                        } 
+                    </div>
+                </div>
             </div>
             
         )
     }
 }
 
-export default Images
+export default Profiles
