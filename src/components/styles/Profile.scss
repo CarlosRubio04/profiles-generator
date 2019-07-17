@@ -18,8 +18,12 @@
 
 .ProfileHeader {
     padding: 60px 20px 10px;
+    h2 {
+        text-decoration: none !important;
+    }
     span {
         font-family: 'Roboto Mono', monospace;
+        text-decoration: none !important;
     }
 }
 .ProfileBody {
