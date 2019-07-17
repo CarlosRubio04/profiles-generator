@@ -155,7 +155,7 @@ class ProfileForm extends React.Component {
                                         conocimientoTecnico={this.props.formValues.conocimientoTecnico}
                                         ciudad={this.props.formValues.ciudad}
                                         descripcion={this.props.formValues.descripcion}
-                                    />} fileName="somename.pdf">
+                                    />} fileName={`${this.props.formValues.cargo}_profile.pdf`}>
                                 {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
                                 </PDFDownloadLink>
                             </div>     
