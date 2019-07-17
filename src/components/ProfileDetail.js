@@ -23,7 +23,7 @@ class ProfileDetail extends React.Component {
                                 </div>
                                 <div className="Col5">
                                     <span>Cargo del jefe inmediato</span>
-                                    <p>{this.props.cargosJefeInmediato}</p>
+                                    <p>{this.props.cargoJefeInmediato}</p>
                                 </div>
                             </div>
 

@@ -1,5 +1,8 @@
 import React from 'react';
-import './styles/ProfileForm.scss'
+import ProfilePdf from '../components/ProfilePdf';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+
+import './styles/ProfileForm.scss';
 
 class ProfileForm extends React.Component {
 
@@ -133,9 +136,29 @@ class ProfileForm extends React.Component {
                             ></textarea>
                         </div>
                         <div className="FormSubmit">
-                            <button onClick={this.handleClick} className="Text-Button Button Button-Secondary-Dark">
+                            {/* <button onClick={this.handleClick} className="Text-Button Button Button-Secondary-Dark">
                                 Save
-                            </button>       
+                            </button>    */}
+                            <div>
+                                <PDFDownloadLink  className="Text-Button Button Button-Secondary-Dark"
+                                    document={
+                                    <ProfilePdf 
+                                        cargo={this.props.formValues.cargo}
+                                        nivel={this.props.formValues.nivel}
+                                        area={this.props.formValues.area}
+                                        cargosDependientes={this.props.formValues.cargosDependientes}
+                                        cargoJefeInmediato={this.props.formValues.cargoJefeInmediato}
+                                        cargoAlReportar={this.props.formValues.cargoAlReportar}
+                                        educacion={this.props.formValues.educacion}
+                                        experiencia={this.props.formValues.experiencia}
+                                        idiomas={this.props.formValues.idiomas}
+                                        conocimientoTecnico={this.props.formValues.conocimientoTecnico}
+                                        ciudad={this.props.formValues.ciudad}
+                                        descripcion={this.props.formValues.descripcion}
+                                    />} fileName="somename.pdf">
+                                {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
+                                </PDFDownloadLink>
+                            </div>     
                         </div>
                         {this.props.error && (
                             <p className="text-danger">{this.props.error.message}</p>

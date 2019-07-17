@@ -2,7 +2,6 @@ import React from 'react';
 
 import ProfileForm from '../components/ProfileForm';
 import ProfileDetail from '../components/ProfileDetail';
-
 import firebase from '../firebase';
 
 class ProfileEdit extends React.Component {
@@ -81,9 +80,9 @@ class ProfileEdit extends React.Component {
                                 onSubmit={this.handleSubmit}
                                 formValues={this.state.form}
                                 error={this.state.error}
-                            />
+                            />                                     
                         </div>
-                        <div className="Col8 Bg-Primary-Dark">
+                        <div className="Col8">
                             <ProfileDetail
                                 cargo={this.state.form.cargo}
                                 nivel={this.state.form.nivel}
@@ -105,5 +104,4 @@ class ProfileEdit extends React.Component {
         )
     }
 }
-
 export default ProfileEdit;
