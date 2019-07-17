@@ -1,23 +1,22 @@
-
 .Navbar {
-    position: relative;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &-Container {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 1280px;
+    padding: 20px 14px 12px;
+    position: relative;
 
-    &-Container {
-        width: 100%;
-        max-width: 1280px;
-        padding: 20px 14px 12px;
-        position: relative;
-
-        .Body-1 {
-            color: #5B5B5B;
-            text-decoration: none;
-            font-family: 'Roboto Mono', monospace;
-            span {
-                font-weight: 500;
-            }
-        }
+    .Body-1 {
+      color: #5b5b5b;
+      text-decoration: none;
+      font-family: "Roboto Mono", monospace;
+      span {
+        font-weight: 500;
+      }
     }
-} 
+  }
+}

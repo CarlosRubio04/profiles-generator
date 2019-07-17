@@ -6,9 +6,9 @@ export default class Dashboard extends Component {
   render() {
     return (
       <section className="Main">
-            <div className="Row">
-                <Profiles />
-             </div>
+        <div className="Row">
+          <Profiles />
+        </div>
       </section>
     );
   }

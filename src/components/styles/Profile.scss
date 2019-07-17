@@ -1,31 +1,30 @@
-
 .ProfileContiner {
-    width: 100%;
-    max-width: 400px;
-    position: relative;
-    cursor: pointer;
-    background-color: #fff;
-    border-radius: 6px;
-    color: #5B5B5B;
-    overflow: hidden;
-    box-shadow: 0 1px 16px 0 rgba($color: #6B6B6B, $alpha: .10);
-    transition: box-shadow .5s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 6px;
+  color: #5b5b5b;
+  overflow: hidden;
+  box-shadow: 0 1px 16px 0 rgba($color: #6b6b6b, $alpha: 0.1);
+  transition: box-shadow 0.5s ease-in-out;
 
-    &:hover {
-        box-shadow: 0 10px 16px 0 rgba($color: #6B6B6B, $alpha: .10);
-    }
+  &:hover {
+    box-shadow: 0 10px 16px 0 rgba($color: #6b6b6b, $alpha: 0.1);
+  }
 }
 
 .ProfileHeader {
-    padding: 60px 20px 10px;
-    h2 {
-        text-decoration: none !important;
-    }
-    span {
-        font-family: 'Roboto Mono', monospace;
-        text-decoration: none !important;
-    }
+  padding: 60px 20px 10px;
+  h2 {
+    text-decoration: none !important;
+  }
+  span {
+    font-family: "Roboto Mono", monospace;
+    text-decoration: none !important;
+  }
 }
 .ProfileBody {
-    padding: 0 20px;
+  padding: 0 20px;
 }

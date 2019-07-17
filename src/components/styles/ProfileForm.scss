@@ -1,47 +1,47 @@
 .Form {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 
-    &Container {
-        position: relative;
-        padding: 20px 40px 20px 10px;
-    }
+  &Container {
+    position: relative;
+    padding: 20px 40px 20px 10px;
+  }
 }
 .formControl {
-    display: block;
-    width: 100%;
-    -webkit-tap-highlight-color: transparent;
-    background-color: #fff;
-    border-radius: 4px;
-    border: solid 1px #e0e7ee;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 400;
-    min-height: 42px;
-    user-select: none;
-    white-space: nowrap;
-    outline: 0;
-    padding-left: 18px;
-    padding-right: 30px;
-    position: relative;
-    margin-bottom: 0;
-    line-height: 1.5;
-    color: #495057;
-    background-clip: padding-box;
-    overflow: auto;
-    resize: vertical;
-    white-space: pre-wrap;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  display: block;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 4px;
+  border: solid 1px #e0e7ee;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  min-height: 42px;
+  user-select: none;
+  white-space: nowrap;
+  outline: 0;
+  padding-left: 18px;
+  padding-right: 30px;
+  position: relative;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  overflow: auto;
+  resize: vertical;
+  white-space: pre-wrap;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .FormGroup {
-    position: relative;
-    margin-bottom: 8px;
+  position: relative;
+  margin-bottom: 8px;
 
-    label {
-        color: #90a1b5;
-        font-size: 9px;
-        text-transform: uppercase;
-        margin: 0 2px 4px;
-    }
+  label {
+    color: #90a1b5;
+    font-size: 9px;
+    text-transform: uppercase;
+    margin: 0 2px 4px;
+  }
 }

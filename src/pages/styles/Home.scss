@@ -1,23 +1,22 @@
-
 .Main {
-    min-height: 94vh;
-    display: flex;
+  min-height: 94vh;
+  display: flex;
 
-    .Col {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+  .Col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
 .h1 {
-    color: #5B5B5B;
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 0px;
+  color: #5b5b5b;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0px;
 }
 .sub {
-    color: #5B5B5B;
-    font-family: 'Roboto Mono', monospace;
+  color: #5b5b5b;
+  font-family: "Roboto Mono", monospace;
 }
