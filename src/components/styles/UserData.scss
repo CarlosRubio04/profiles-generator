@@ -1,0 +1,17 @@
+.User {
+    position: relative;
+    color: #5B5B5B;
+    &Container {
+        padding: 20px;
+    }
+
+    &Picture {
+        position: relative;
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+            max-width: 100%;
+        }
+    }
+}

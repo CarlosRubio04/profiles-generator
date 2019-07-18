@@ -22,7 +22,7 @@ class Navbar extends React.Component {
             Acsendo<span>Profiles</span>
           </Link>
           <div className="User">
-            {user ? <p className="Body-1">Hello, {user.displayName}</p> : <p className="Body-1">Please sign in</p>}
+            {user ? <Link to="/myprofile" className="Body-1">Hello, {user.displayName}</Link> : <p className="Body-1">Please sign in</p>}
             {user ? (
               <button className="Text-Button Button Button-Secondary-Dark" onClick={signOut}>Sign out</button>
             ) : (
