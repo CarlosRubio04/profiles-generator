@@ -3,7 +3,7 @@ import withFirebaseAuth from "react-with-firebase-auth";
 import "firebase/auth";
 import firebase from "../firebase";
 
-import UserData from '../components/UserData';
+import UserData from "../components/UserData";
 
 const firebaseAppAuth = firebase.auth();
 const providers = {
@@ -24,10 +24,10 @@ class UserProfile extends React.Component {
   isLogged = () => {
     if (firebaseAppAuth.currentUser) {
       this.setState({ loading: false, error: null });
-      console.log(firebaseAppAuth)
+      console.log(firebaseAppAuth);
     } else {
       this.setState({ loading: true, error: null });
-      console.log(firebaseAppAuth)
+      console.log(firebaseAppAuth);
     }
   };
 
@@ -41,27 +41,24 @@ class UserProfile extends React.Component {
       return <h1 className="Color-Primary">{this.state.error}</h1>;
     }
     return (
-        <div className="Main Profile">
-            <div className="MainContainer">
-                <div className="Row FlexBetween">
-                    <div className="Col4">
-                        {
-                            user ?
-                            <UserData
-                                name={user.displayName}
-                                email={user.email}
-                                picture={user.photoURL}
-                            />
-                            :
-                            <h1>hola</h1>
-                        }
-                    </div>
-                    <div className="Col8">
-                        Hola
-                    </div>
-                </div>
-            </div>
+      <div className="Main Profile">
+        <div className="Row FlexBetween">
+          <div className="Col3">
+            {user ? (
+              <UserData
+                name={user.displayName}
+                email={user.email}
+                picture={user.photoURL}
+              />
+            ) : (
+              <h1>hola</h1>
+            )}
+          </div>
+          <div className="Col9 Bg-Primary-light">
+            
+          </div>
         </div>
+      </div>
     );
   }
 }
