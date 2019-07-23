@@ -4,6 +4,7 @@ import withFirebaseAuth from "react-with-firebase-auth";
 import "firebase/auth";
 import firebase from "../firebase";
 
+import UserCollection from '../components/UserCollection';
 import UserData from "../components/UserData";
 
 const firebaseAppAuth = firebase.auth();
@@ -64,7 +65,11 @@ class UserProfile extends React.Component {
                 picture={user.photoURL}
               />
             </div>
-            <div className="Col9 Bg-Primary-light" />
+            <div className="Col9 Bg-Primary-light">
+              {
+                this.state.data.lenght ? 'Hola' : <UserCollection />
+              }
+            </div>
           </div>
         </div>
       );
@@ -82,7 +87,7 @@ class UserProfile extends React.Component {
             </button>
           </div>
           <div className="Col8">
-            
+
           </div>
         </div>
       </div>

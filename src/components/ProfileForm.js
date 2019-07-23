@@ -135,10 +135,10 @@ class ProfileForm extends React.Component {
                                 value={this.props.formValues.descripcion}
                             ></textarea>
                         </div>
-                        <div className="FormSubmit">
-                            {/* <button onClick={this.handleClick} className="Text-Button Button Button-Secondary-Dark">
+                        <div className="FormSubmit FlexBetween">
+                            <button onClick={this.handleClick} className="Text-Button Button Button-Secondary-Dark">
                                 Save
-                            </button>    */}
+                            </button>   
                             <div>
                                 <PDFDownloadLink  className="Text-Button Button Button-Secondary-Dark"
                                     document={
