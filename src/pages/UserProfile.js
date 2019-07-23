@@ -1,4 +1,5 @@
 import React from "react";
+
 import withFirebaseAuth from "react-with-firebase-auth";
 import "firebase/auth";
 import firebase from "../firebase";
@@ -18,21 +19,33 @@ class UserProfile extends React.Component {
   };
 
   componentDidMount() {
-    this.isLogged();
+    this.fetchData();
   }
 
-  isLogged = () => {
-    if (firebaseAppAuth.currentUser) {
-      this.setState({ loading: false, error: null });
-      console.log(firebaseAppAuth);
-    } else {
-      this.setState({ loading: true, error: null });
-      console.log(firebaseAppAuth);
+  fetchData = async () => {
+    this.setState({ loading: true, error: null });
+
+    try {
+      const UID = firebaseAppAuth.currentUser.uid;
+      const REF = firebase.database().ref("users/" + UID + "/colections");
+
+      REF.once("value")
+        .then(snaptshot => {
+          this.setState({
+            loading: false,
+            data: snaptshot.val()
+          });
+        })
+        .catch(error => {
+          this.setState({ loading: false, data: {} });
+        });
+    } catch (error) {
+      this.setState({ loading: false, data: {} });
     }
   };
 
   render() {
-    const { user } = this.props;
+    const { user, signInWithGoogle } = this.props;
 
     if (this.state.loading) {
       return <h1 className="Color-Primary">Loading ...</h1>;
@@ -40,21 +53,35 @@ class UserProfile extends React.Component {
     if (this.state.error) {
       return <h1 className="Color-Primary">{this.state.error}</h1>;
     }
-    return (
-      <div className="Main Profile">
-        <div className="Row FlexBetween">
-          <div className="Col3">
-            {user ? (
+    if (user) {
+      return (
+        <div className="Main Profile">
+          <div className="Row FlexBetween">
+            <div className="Col3">
               <UserData
                 name={user.displayName}
                 email={user.email}
                 picture={user.photoURL}
               />
-            ) : (
-              <h1>hola</h1>
-            )}
+            </div>
+            <div className="Col9 Bg-Primary-light" />
           </div>
-          <div className="Col9 Bg-Primary-light">
+        </div>
+      );
+    }
+
+    return (
+      <div className="Main Profile">
+        <div className="Row FlexCenter AlignCenter">
+          <div className="Col4 FlexCenter">
+            <button
+              className="Text-Button Button Button-Secondary-Dark"
+              onClick={signInWithGoogle}
+            >
+              Sign in with Google
+            </button>
+          </div>
+          <div className="Col8">
             
           </div>
         </div>
