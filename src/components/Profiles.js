@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from '../firebase';
 
 import Profile from './Profile';
+import Loader from './Loader';
 
 import './styles/Profiles.scss';
 
@@ -38,7 +39,7 @@ class Profiles extends React.Component {
     render() {
         if(this.state.loading) {
             return(
-                <h1 className="Color-Primary">Loading ...</h1>
+                <Loader message={'Loading ...'}/>
             )
         }
         

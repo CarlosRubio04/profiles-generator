@@ -2,6 +2,7 @@ import React from 'react';
 
 import ProfileForm from '../components/ProfileForm';
 import ProfileDetail from '../components/ProfileDetail';
+import Loader from '../components/Loader';
 import firebase from '../firebase';
 
 class ProfileEdit extends React.Component {
@@ -61,7 +62,7 @@ class ProfileEdit extends React.Component {
 
     render() {
         if (this.state.loading) {
-            return (<h1 className="Color-Primary">Loading ...</h1>)
+            return (<Loader message={'Loading ...'}/>)
         }
 
         if(this.state.error) {

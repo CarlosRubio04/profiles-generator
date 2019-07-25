@@ -6,6 +6,7 @@ import firebase from "../firebase";
 
 import UserCollection from '../components/UserCollection';
 import UserData from "../components/UserData";
+import Loader from '../components/Loader';
 
 const firebaseAppAuth = firebase.auth();
 const providers = {
@@ -49,7 +50,7 @@ class UserProfile extends React.Component {
     const { user, signInWithGoogle } = this.props;
 
     if (this.state.loading) {
-      return <h1 className="Color-Primary">Loading ...</h1>;
+      return <Loader message={'Loading ...'}/>;
     }
     if (this.state.error) {
       return <h1 className="Color-Primary">{this.state.error}</h1>;
