@@ -4,12 +4,12 @@ import "./styles/Loader.scss";
 function Loader(props) {
   return (
     <div className="Loader">
-      <div class="atom-spinner">
-        <div class="spinner-inner">
-          <div class="spinner-line" />
-          <div class="spinner-line" />
-          <div class="spinner-line" />
-          <div class="spinner-circle">&#9679;</div>
+      <div className="atom-spinner">
+        <div className="spinner-inner">
+          <div className="spinner-line" />
+          <div className="spinner-line" />
+          <div className="spinner-line" />
+          <div className="spinner-circle">&#9679;</div>
         </div>
       </div>
       <div className="LoaderText">
