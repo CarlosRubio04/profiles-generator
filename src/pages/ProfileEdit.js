@@ -2,6 +2,7 @@ import React from "react";
 
 import ProfileForm from "../components/ProfileForm";
 import ProfileDetail from "../components/ProfileDetail";
+import SingInModal from '../components/SingInModal';
 import Loader from "../components/Loader";
 
 import withFirebaseAuth from "react-with-firebase-auth";
@@ -17,6 +18,7 @@ class ProfileEdit extends React.Component {
   state = {
     loading: true,
     loadingMessage: 'Loading ...',
+    modalIsOpen: false,
     error: null,
     form: {
       cargo: "",
@@ -69,7 +71,7 @@ class ProfileEdit extends React.Component {
     e.preventDefault();
     console.log(e);
     const USER = firebaseAppAuth.currentUser;
-    USER ? this.saveData(USER.uid) : console.log("please Login");
+    USER ? this.saveData(USER.uid) : this.handleOpenModal();
   };
 
   saveData = userId => {
@@ -87,6 +89,15 @@ class ProfileEdit extends React.Component {
         console.log("error ", error);
       });
   };
+
+  handleCloseModal = e => {
+    this.setState({ modalIsOpen: false });
+  };
+
+  handleOpenModal = e => {
+    this.setState({ modalIsOpen: true });
+  };
+
   render() {
     if (this.state.loading) {
       return <Loader message={this.state.loadingMessage} />;
@@ -123,6 +134,9 @@ class ProfileEdit extends React.Component {
                 ciudad={this.state.form.ciudad}
                 descripcion={this.state.form.descripcion}
               />
+              <SingInModal
+                  isOpen={this.state.modalIsOpen}
+                />
             </div>
           </div>
         </div>
