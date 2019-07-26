@@ -15,7 +15,7 @@ function Modal (props) {
                     X
                 </button>
 
-                {props.chilren}
+                { props.children }
             </div>
         </div>,
         document.getElementById('modal')

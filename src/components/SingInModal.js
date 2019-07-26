@@ -1,25 +1,16 @@
 import React from "react";
-import withFirebaseAuth from "react-with-firebase-auth";
-import "firebase/auth";
-import firebase from "../firebase";
-
 import Modal from "./Modal";
+import './styles/SingInModal.scss';
 
-const firebaseAppAuth = firebase.auth();
-const providers = {
-  googleProvider: new firebase.auth.GoogleAuthProvider()
-};
-
-function SingInModal(props) {
-  const { signInWithGoogle } = this.props;
+function SingInModal (props) {
   return (
-    <Modal isOpen={props.isOpen}>
+    <Modal isOpen={props.isOpen} onClose={props.onClose}>
       <div className="SingInModal">
-        <h1>Please Sing IN</h1>
-        <p>To save data you have to sing in</p>
+        <h1>Please SingIn</h1>
+        <p>To save data you have to singin</p>
         <button
           className="Text-Button Button Button-Secondary-Dark"
-          onClick={signInWithGoogle}
+          onClick={props.onSingIn}
         >
           Sign in with Google
         </button>
@@ -27,9 +18,6 @@ function SingInModal(props) {
       </div>
     </Modal>
   );
-}
+};
 
-export default withFirebaseAuth({
-    providers,
-    firebaseAppAuth
-  })(SingInModal);
+export default SingInModal;

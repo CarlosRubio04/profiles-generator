@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from 'react-router-dom'
 
 import ProfileForm from "../components/ProfileForm";
 import ProfileDetail from "../components/ProfileDetail";
@@ -19,6 +20,7 @@ class ProfileEdit extends React.Component {
     loading: true,
     loadingMessage: 'Loading ...',
     modalIsOpen: false,
+    redirect: false,
     error: null,
     form: {
       cargo: "",
@@ -81,7 +83,7 @@ class ProfileEdit extends React.Component {
 
     REF.push(this.state.form)
       .then(data => {
-        this.setState({ loading: false });
+        this.setState({ loading: false, redirect: true });
         console.log("data ", data);
       })
       .catch(error => {
@@ -98,7 +100,23 @@ class ProfileEdit extends React.Component {
     this.setState({ modalIsOpen: true });
   };
 
+  handleSingIn = e => {
+    console.log('hola');
+    firebaseAppAuth.signInWithPopup(providers.googleProvider)
+      .then( res => {
+        console.log(res);
+        this.handleCloseModal();
+        this.saveData(res.user.uid);
+      }).catch( err => {
+        console.log(err);
+      });
+  };
+
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/myprofile' />
+    }
+
     if (this.state.loading) {
       return <Loader message={this.state.loadingMessage} />;
     }
@@ -136,6 +154,8 @@ class ProfileEdit extends React.Component {
               />
               <SingInModal
                   isOpen={this.state.modalIsOpen}
+                  onClose={this.handleCloseModal}
+                  onSingIn={this.handleSingIn}
                 />
             </div>
           </div>
