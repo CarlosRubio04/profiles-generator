@@ -79,9 +79,12 @@ class ProfileEdit extends React.Component {
   saveData = userId => {
     console.log(userId);
     this.setState({ loading: true, loadingMessage: 'Saving Data ...' });
-    const REF = firebase.database().ref("users/" + userId + "/Collections");
-
-    REF.push(this.state.form)
+    const REF_ID = Date.now();
+    const REF = firebase.database().ref("users/" + userId + "/Collections/" + REF_ID);
+    let data = this.state.form;
+    data.id = REF_ID;
+    
+    REF.set(data)
       .then(data => {
         this.setState({ loading: false, redirect: true });
         console.log("data ", data);

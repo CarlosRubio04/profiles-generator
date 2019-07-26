@@ -21,30 +21,9 @@ class UserProfile extends React.Component {
   };
 
   componentDidMount() {
-    this.fetchData();
+    // this.fetchData();
+    this.setState({ loading: false })
   }
-
-  fetchData = async () => {
-    this.setState({ loading: true, error: null });
-
-    try {
-      const UID = firebaseAppAuth.currentUser.uid;
-      const REF = firebase.database().ref("users/" + UID + "/colections");
-
-      REF.once("value")
-        .then(snaptshot => {
-          this.setState({
-            loading: false,
-            data: snaptshot.val()
-          });
-        })
-        .catch(error => {
-          this.setState({ loading: false, data: {} });
-        });
-    } catch (error) {
-      this.setState({ loading: false, data: {} });
-    }
-  };
 
   render() {
     const { user, signInWithGoogle } = this.props;
@@ -67,9 +46,9 @@ class UserProfile extends React.Component {
               />
             </div>
             <div className="Col9 Bg-Primary-light">
-              {
-                this.state.data.lenght ? 'Hola' : <UserCollection />
-              }
+               <UserCollection 
+                userId={user.uid}
+                />
             </div>
           </div>
         </div>
@@ -79,16 +58,13 @@ class UserProfile extends React.Component {
     return (
       <div className="Main Profile">
         <div className="Row FlexCenter AlignCenter">
-          <div className="Col4 FlexCenter">
+          <div className="Col12 FlexCenter">
             <button
               className="Text-Button Button Button-Secondary-Dark"
               onClick={signInWithGoogle}
             >
               Sign in with Google
             </button>
-          </div>
-          <div className="Col8">
-
           </div>
         </div>
       </div>

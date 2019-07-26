@@ -19,21 +19,28 @@ class UserCollection extends React.Component {
         this.fetchData();
     }
 
-    fetchData = () => {
+    fetchData = async () => {
         this.setState({ loading: true, error: null });
-
-        const REF = firebase.database().ref('profiles');
-            
-        REF.once('value').then((snaptshot) => {
-            this.setState({
-                loading: false,
-                data: Object.values(snaptshot.val()) 
-            })
-        }).catch((error) => {
-            this.setState({ loading: false, error: error})
-        })
         
-    }
+        try {
+        console.log(this.props.userId);
+          const REF = firebase.database().ref("users/" + this.props.userId + "/Collections");
+    
+          REF.once("value")
+            .then(snaptshot => {
+                console.log(snaptshot.val())
+                this.setState({
+                    loading: false,
+                    data: Object.values(snaptshot.val())
+                });
+            })
+            .catch(error => {
+              this.setState({ loading: false, data: {} });
+            });
+        } catch (error) {
+          this.setState({ loading: false, data: {} });
+        }
+      };
 
     render() {
         if(this.state.loading) {
@@ -42,7 +49,7 @@ class UserCollection extends React.Component {
             )
         }
         
-        if(this.state.error) {
+        if(this.state.error | this.state.data == null) {
             return(
                 <h1 className="Color-Primary">{this.state.error}</h1>
             )
