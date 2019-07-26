@@ -28,7 +28,7 @@ class UserCollection extends React.Component {
     
           REF.once("value")
             .then(snaptshot => {
-                console.log(snaptshot.val())
+                console.log(snaptshot.val());
                 this.setState({
                     loading: false,
                     data: Object.values(snaptshot.val())
@@ -60,7 +60,9 @@ class UserCollection extends React.Component {
                 <div className="Row FlexCenter">
                     <div className="ProfilesContainer">
                         {
-                            this.state.data.map(item => {
+                            Object.keys(this.state.data).length === 0  ?
+                                'Holaaaa'
+                            : this.state.data.map(item => {
                                 return (<Profile key={item.id} profile={item} />)
                             })
                         } 
